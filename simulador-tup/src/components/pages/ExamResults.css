@@ -1,0 +1,32 @@
+
+
+.exam-result-card {
+  background: rgb(39, 38, 38);
+  padding: 40px 60px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.exam-result-card h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.exam-result-card h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.exam-result-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.meme-container img {
+  max-width: 400px;
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
