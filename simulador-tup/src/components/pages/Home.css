@@ -1,0 +1,176 @@
+.modal-to-navbar {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90vw;
+  max-width: 400px;
+  min-height: 200px;
+  background-color: #2b2c2c;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 1s ease-in-out;
+  z-index: 20;
+  overflow: hidden;
+  flex-direction: column;
+}
+
+.modal-content form input {
+  padding: 12px;
+  margin-bottom: 15px; 
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+
+.modal-content form button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #1571e9;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.modal-content form button:hover {
+  background-color: #0b49a1;
+}
+
+.modal-to-navbar.expanded {
+  min-height: 220px;
+  height: auto;
+  padding: 10px 0;
+  transition: all 0.8s ease-out;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  color: white;
+  width: 100%;
+}
+
+.navbar-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+  gap: 15px;
+}
+.navbar-username {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.navbar-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  padding: 0 10px;
+}
+
+.navbar-buttons button {
+  width: 80%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #5a5c5c;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.navbar-buttons button:hover {
+  background-color: #444;
+}
+
+@media (max-width: 480px) {
+  .modal-to-navbar {
+    width: 95vw;
+  }
+
+  .navbar-buttons button {
+    width: 90%;
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .navbar-username {
+    font-size: 16px;
+  }
+}
+.modal-container-exam {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 50;
+}
+
+.modal-content-exam {
+  background-color: #2b2c2c;
+  padding: 30px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+.exam-buttons {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.exam-buttons button {
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 6px;
+  max-height: 100px;
+  min-height: 70px;
+  max-width: 200px;
+  min-width: 150px;
+  border: none;
+  background-color: #1571e9;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.exam-buttons button:hover {
+  background-color: #020335;
+}
+
+.close-button {
+  margin-top: 20px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  background-color: #b41a1a;
+  color: white;
+  cursor: pointer;
+}
+
+.close-button:hover {
+  background-color: #1b0202;
+}

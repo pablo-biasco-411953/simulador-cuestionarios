@@ -1,0 +1,376 @@
+[
+  {
+    "id": 1,
+    "pregunta": "En el contexto del control de versiones, ¿a qué se denomina Repositorio?",
+    "opciones": [
+      "Disco duro que contiene el proyecto",
+      "Archivo de respaldo que permite recuperar los cambios de un proyecto",
+      "Cambio confirmado que se realizó a un archivo por un autor",
+      "Conjunto de plantillas y buenas prácticas que puede utilizar el desarrollador",
+      "Lugar donde se almacenan cambios de un proyecto"
+    ],
+    "correcta": "Lugar donde se almacenan cambios de un proyecto"
+  },
+  {
+    "id": 2,
+    "pregunta": "¿Cómo se llama un método estático MostrarMensaje en una clase estática Utilidades?",
+    "opciones": [
+      "new Utilidades().MostrarMensaje()",
+      "Utilidades.MostrarMensaje()",
+      "Utilidades->MostrarMensaje()",
+      "Utilidades::MostrarMensaje()"
+    ],
+    "correcta": "Utilidades.MostrarMensaje()"
+  },
+  {
+    "id": 3,
+    "pregunta": "¿Qué es una interfaz en POO?",
+    "opciones": [
+      "Un método que no puede ser sobrescrito",
+      "Un contrato que define un conjunto de métodos que una clase debe implementar",
+      "Una clase que no puede ser instanciada",
+      "Una clase que solo tiene métodos privados"
+    ],
+    "correcta": "Un contrato que define un conjunto de métodos que una clase debe implementar"
+  },
+  {
+    "id": 4,
+    "pregunta": "En el contexto de los archivos en Git, ¿cuándo un archivo está en estado Commited?",
+    "opciones": [
+      "Un archivo que fue subido y publicado por el autor",
+      "Un archivo que fue clonado y aún no tiene modificaciones",
+      "Un archivo modificado en su contenido, pero sin confirmarse ni incluirse en el próximo Commit",
+      "Un archivo modificado en su contenido y confirmado",
+      "Un archivo modificado en su contenido, para incluirse en el próximo Commit"
+    ],
+    "correcta": "Un archivo modificado en su contenido y confirmado"
+  },
+  {
+    "id": 5,
+    "pregunta": "En el contexto del control de versiones, ¿a qué se denomina Copia de Trabajo?",
+    "opciones": [
+      "Copia que se realiza del proyecto en un servidor externo para respaldo",
+      "Copia en el servidor utilizada para testear el proyecto",
+      "Copia local del proyecto donde el desarrollador realiza cambios",
+      "Copia local de las líneas de código cambiadas por el desarrollador",
+      "Copia local del historial de cambios del proyecto"
+    ],
+    "correcta": "Copia que se realiza del proyecto en un servidor externo para respaldo"
+  },
+  {
+    "id": 6,
+    "pregunta": "¿Qué permite la implementación de interfaces en una clase?",
+    "opciones": [
+      "Definir un contrato que la clase debe cumplir",
+      "Crear instancias de una clase abstracta",
+      "Ocultar métodos de una clase base",
+      "Heredar automáticamente de otra clase"
+    ],
+    "correcta": "Definir un contrato que la clase debe cumplir"
+  },
+  {
+    "id": 7,
+    "pregunta": "¿Qué permite el encapsulamiento en la Programación Orientada a Objetos?",
+    "opciones": [
+      "Heredar características de otro objeto",
+      "Crear instancias de una clase",
+      "Utilizar múltiples formas de un objeto",
+      "Ocultar los detalles internos de un objeto"
+    ],
+    "correcta": "Ocultar los detalles internos de un objeto"
+  },
+  {
+    "id": 8,
+    "pregunta": "¿Qué se logra con el uso de propiedades en C#?",
+    "opciones": [
+      "Controlar el acceso a los campos de una clase",
+      "Definir constructores adicionales",
+      "Heredar métodos de otra clase",
+      "Crear instancias de una clase"
+    ],
+    "correcta": "Controlar el acceso a los campos de una clase"
+  },
+  {
+    "id": 9,
+    "pregunta": "¿Qué se entiende por 'sobrecarga de métodos'?",
+    "opciones": [
+      "Ocultar los métodos de una clase",
+      "Definir múltiples clases con el mismo nombre",
+      "Definir múltiples métodos con el mismo nombre pero diferentes parámetros",
+      "Heredar métodos de una clase base"
+    ],
+    "correcta": "Definir múltiples métodos con el mismo nombre pero diferentes parámetros"
+  },
+  {
+    "id": 10,
+    "pregunta": "¿Qué característica define a una clase estática en C#?",
+    "opciones": [
+      "No puede contener métodos",
+      "No puede contener atributos",
+      "No puede ser utilizada en aplicaciones de consola",
+      "No puede ser instanciada"
+    ],
+    "correcta": "No puede ser instanciada"
+  },
+  {
+    "id": 11,
+    "pregunta": "¿Cuál es la diferencia principal entre una clase abstracta y una interfaz?",
+    "opciones": [
+      "Una interfaz no puede tener métodos, una clase abstracta sí",
+      "Una clase abstracta puede contener implementación, una interfaz no",
+      "Una clase abstracta no puede ser heredada, una interfaz sí",
+      "Una interfaz puede contener implementación, una clase abstracta no"
+    ],
+    "correcta": "Una clase abstracta puede contener implementación, una interfaz no"
+  },
+  {
+    "id": 12,
+    "pregunta": "¿Cómo se accede a un elemento de una enumeración llamada Nivel con valor Medio?",
+    "opciones": [
+      "Nivel[Medio]",
+      "Nivel.Medio",
+      "Nivel->Medio",
+      "Nivel.1"
+    ],
+    "correcta": "Nivel.Medio"
+  },
+  {
+    "id": 13,
+    "pregunta": "Indique cuál/es afirmaciones NO son válidas respecto a la arquitectura Cliente-Servidor",
+    "opciones": [
+      "Tiene dos partes, por un lado, el servidor y por otro uno o más clientes",
+      "Un ejemplo de este modelo es usar un protocolo FTP.",
+      "Su propósito es mantener una comunicación de información entre diferentes entidades de una red",
+      "El ejemplo más popular más mencionado es la red de Internet.",
+      "Permite conectar un único cliente a un servidor"
+    ],
+    "correcta": "Permite conectar un único cliente a un servidor"
+  },
+  {
+    "id": 14,
+    "pregunta": "¿A qué característica de HTTP hace referencia la siguiente afirmación? El protocolo HTTP permite desarrollar nuevas funcionalidades haciendo uso de las cabeceras y su semántica estandarizada.",
+    "opciones": [
+      "Existencia de Sesiones.",
+      "Sencillez.",
+      "Extensibilidad.",
+      "Conexiones HTTP.",
+      "Inexistencia de Estados."
+    ],
+    "correcta": "Extensibilidad"
+  },
+  {
+    "id": 15,
+    "pregunta": "Indique cuál/es afirmaciones NO corresponden a desventajas de una arquitectura Cliente-Servidor",
+    "opciones": [
+      "Facilita la escalabilidad de los sistemas",
+      "Es un modelo flexible y adaptable",
+      "Se requiere habilidad para que un servidor sea reparado",
+      "Alto costo económico tanto para hardware como software.",
+      "Problemas de seguridad"
+    ],
+    "correcta": [
+      "Facilita la escalabilidad de los sistemas",
+      "Es un modelo flexible y adaptable"
+    ]
+  },
+  {
+    "id": 16,
+    "pregunta": "Indique qué pasos son siempre necesarios para enviar un mensaje HTTP desde un cliente a un servidor.",
+    "opciones": [
+      "Se envía un tipo de mensaje indicando host, path y versión del protocolo entre otros",
+      "Se solicita memoria cache de un proxy.",
+      "Se envía un código de respuesta",
+      "Se establece una conexión",
+      "Se solicita autorización al servidor"
+    ],
+    "correcta": [
+      "Se envía un tipo de mensaje indicando host, path y versión del protocolo entre otros",
+      "Se establece una conexión"
+    ]
+  },
+  {
+    "id": 17,
+    "pregunta": "El método GET permite:",
+    "opciones": [
+      "Se utiliza para enviar una entidad al recurso especificado, lo que a menudo provoca un cambio de estado",
+      "Elimina un recurso especificado",
+      "Modificar un recurso existente.",
+      "Solo recuperar datos",
+      "Realiza una prueba de bucle de mensajes"
+    ],
+    "correcta": "Solo recuperar datos"
+  },
+  {
+    "id": 18,
+    "pregunta": "Todo Request (pedido HTTP) está formado por:",
+    "opciones": [
+      "Cabeceras",
+      "Todas son correctas",
+      "Método",
+      "Dirección del recurso",
+      "Cuerpo"
+    ],
+    "correcta": "Todas son correctas"
+  },
+  {
+    "id": 19,
+    "pregunta": "En una arquitectura Cliente-Servidor, ¿qué es un protocolo?",
+    "opciones": [
+      "Un conjunto de información, en un formato específico.",
+      "Una pieza de código que responde a las necesidades de un cliente.",
+      "Una definición de formato y características del flujo de información en una red.",
+      "Un conjunto de clientes y servidores, unidos a través de servicios y bases de datos.",
+      "Un conjunto de normas y procedimientos para posibilitar la comunicación."
+    ],
+    "correcta": "Un conjunto de normas y procedimientos para posibilitar la comunicación."
+  },
+  {
+    "id": 20,
+    "pregunta": "Señale cuál es una característica principal del protocolo HTTP",
+    "opciones": [
+      "Gestiona conexiones a nivel de aplicación",
+      "No es extensible.",
+      "Es sin estado",
+      "No permite manejar sesiones entre clientes y servidor",
+      "Ninguna es correcta."
+    ],
+    "correcta": "Es sin estado"
+  },
+  {
+    "id": 21,
+    "pregunta": "Un código 404 representa:",
+    "opciones": [
+      "Que el recurso ahora se encuentra permanentemente en otra URI",
+      "Ninguna es correcta.",
+      "Recurso no encontrado",
+      "Un error en el servidor",
+      "La solicitud ha tenido éxito."
+    ],
+    "correcta": "Recurso no encontrado"
+  },
+  {
+    "id": 22,
+    "pregunta": "Indique las opciones correctas respecto del método POST.",
+    "opciones": [
+      "Generalmente viene acompañado de un cambio de estado.",
+      "Envía una entidad a un recurso especificado.",
+      "Publica un mensaje informativo o de log en el servidor",
+      "Funciona de igual manera que PATCH.",
+      "Reemplaza todas las representaciones actuales del recurso de destino con la carga útil de la solicitud."
+    ],
+    "correcta": [
+      "Generalmente viene acompañado de un cambio de estado.",
+      "Envía una entidad a un recurso especificado."
+    ]
+  },
+  {
+    "id": 23,
+    "pregunta": "¿Qué es un recurso en el contexto de una API REST?",
+    "opciones": [
+      "Un servidor que almacena datos",
+      "Un archivo XML",
+      "Una base de datos",
+      "Un concepto importante del negocio como facturas, cursos, compras, etc."
+    ],
+    "correcta": "Un concepto importante del negocio como facturas, cursos, compras, etc."
+  },
+  {
+    "id": 24,
+    "pregunta": "¿Cuál de los siguientes es un principio arquitectónico comúnmente seguido por las API web?",
+    "opciones": [
+      "XML",
+      "FTP",
+      "TCP",
+      "REST"
+    ],
+    "correcta": "REST"
+  },
+  {
+    "id": 25,
+    "pregunta": "¿Cuál de las siguientes NO es una característica deseable de un Servicio Web?",
+    "opciones": [
+      "Dependencia del lenguaje de programación específico",
+      "Descripción de sí mismo",
+      "Accesibilidad a través de la Web",
+      "Localización automática"
+    ],
+    "correcta": "Dependencia del lenguaje de programación específico"
+  },
+  {
+    "id": 26,
+    "pregunta": "¿Qué es un servicio web RESTful?",
+    "opciones": [
+      "Un servicio que utiliza SOAP exclusivamente",
+      "Un servicio web basado en FTP",
+      "Un servicio web que no utiliza HTTP",
+      "Un servicio que sigue los principios arquitectónicos REST"
+    ],
+    "correcta": "Un servicio que sigue los principios arquitectónicos REST"
+  },
+  {
+    "id": 27,
+    "pregunta": "¿Cómo se identifica de manera única un recurso en una API REST?",
+    "opciones": [
+      "Mediante un nombre de usuario",
+      "Mediante una URL",
+      "Mediante un URI",
+      "Mediante una dirección IP"
+    ],
+    "correcta": "Mediante un URI"
+  },
+  {
+    "id": 28,
+    "pregunta": "¿Qué indica un código de estado en una respuesta HTTP?",
+    "opciones": [
+      "El éxito o fallo de la solicitud",
+      "La URL del recurso solicitado",
+      "La versión del protocolo HTTP",
+      "El tiempo de respuesta del servidor"
+    ],
+    "correcta": "El éxito o fallo de la solicitud"
+  },
+  {
+    "id": 29,
+    "pregunta": "¿Qué es un Servicio Web?",
+    "opciones": [
+      "Un programa local para gestión de archivos",
+      "Una colección de métodos accesibles desde cualquier lugar de Internet",
+      "Un formato de archivo para documentos",
+      "Un tipo de hardware para servidores"
+    ],
+    "correcta": "Una colección de métodos accesibles desde cualquier lugar de Internet"
+  },
+  {
+    "id": 30,
+    "pregunta": "¿Qué representa una URL en el contexto de una API REST?",
+    "opciones": [
+      "El nombre de un servidor",
+      "Una configuración de red",
+      "La dirección completa de un recurso",
+      "Un archivo en el servidor"
+    ],
+    "correcta": "La dirección completa de un recurso"
+  },
+  {
+    "id": 31,
+    "pregunta": "¿Qué se entiende por endpoint en una API REST?",
+    "opciones": [
+      "La configuración del cliente",
+      "La ubicación completa del recurso",
+      "La base de datos de la API",
+      "El tipo de servidor utilizado"
+    ],
+    "correcta": "La ubicación completa del recurso"
+  },
+  {
+    "id": 32,
+    "pregunta": "¿Qué significa URI en el contexto de las API REST?",
+    "opciones": [
+      "Localizador de Recurso Uniforme",
+      "Lenguaje de Marcado Extensible",
+      "Identificador de Recurso Uniforme",
+      "Protocolo de Transferencia de Hipertexto"
+    ],
+    "correcta": "Identificador de Recurso Uniforme"
+  }
+]

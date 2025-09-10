@@ -1,0 +1,87 @@
+/* src/components/ExamSequential.css */
+
+.exam-sequential-wrapper {
+  font-family: Arial, sans-serif;
+  padding-top: 70px; 
+
+}
+
+
+.exam-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #333333;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  z-index: 1000;
+}
+
+.time-warning {
+  color: #ff4d4d;
+  font-weight: bold;
+}
+
+.question-card {
+  background-color: rgba(23, 24, 24, 0.945);
+  border: 2px solid #0b6d6d;
+  border-radius: 10px;
+  padding: 25px;
+  margin: 40px auto;
+  max-width: 700px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.question-card h3 {
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.options-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.option-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: rgb(71, 70, 70);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.option-label:hover {
+  background-color: #021022;
+}
+
+.question-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.question-actions button {
+  background-color: #0b6d6d;
+  color: white;
+  font-size: 16px;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.question-actions button:hover {
+  background-color: #095252;
+}
