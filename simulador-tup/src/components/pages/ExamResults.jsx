@@ -8,15 +8,8 @@ import mal03 from "../../assets/mal03.png";
 import mal04 from "../../assets/mal04.png";
 import bien01 from "../../assets/bien01.png";
 
-
-function importAll(r) {
-  return r.keys().map(r);
-}
-const malImages = [mal01, mal02,mal03,mal04];
-
+const malImages = [mal01, mal02, mal03, mal04];
 const bienImages = [bien01];
-
-
 
 export default function ExamResult() {
   const location = useLocation();
@@ -26,6 +19,7 @@ export default function ExamResult() {
 
   const [score, setScore] = useState(0);
   const [resultImage, setResultImage] = useState(null);
+  const [reviewMode, setReviewMode] = useState(false);
 
   const totalQuestions = questions?.length || 0;
 
@@ -59,21 +53,64 @@ export default function ExamResult() {
   const timeUsed = 10 * 60 - (timeLeftAtEnd || 0);
 
   const formatTime = (seconds) => {
-    const min = Math.floor(seconds / 60)
-      .toString()
-      .padStart(2, "0");
+    const min = Math.floor(seconds / 60).toString().padStart(2, "0");
     const sec = (seconds % 60).toString().padStart(2, "0");
     return `${min}:${sec}`;
   };
 
-  
   const finalizar = () => {
     localStorage.removeItem("answers");
     localStorage.removeItem("questions");
     localStorage.removeItem("timeLeftAtEnd");
     localStorage.removeItem("exam-started");
-    navigate("/")
+    navigate("/");
   };
+
+  if (reviewMode) {
+    return (
+      <div className="exam-review-wrapper">
+        <div className="exam-review-card">
+          <h1>Revisión del intento: {username}</h1>
+          {questions.map((q, idx) => {
+            const userAnswers = answers[idx] || [];
+            const correctAnswers = Array.isArray(q.correcta)
+              ? q.correcta
+              : [q.correcta].filter(Boolean);
+
+            return (
+              <div key={q.id} className="question-review">
+                <h3>{q.pregunta}</h3>
+                <ul>
+                  {q.opciones.map((opt) => {
+                    const isCorrect = correctAnswers.includes(opt);
+                    const isSelected = userAnswers.includes(opt);
+
+                    return (
+                      <li
+                        key={opt}
+                        className={`option-review ${
+                          isCorrect ? "correct" : isSelected ? "incorrect" : ""
+                        }`}
+                      >
+                        <input type="checkbox" checked={isSelected} disabled />
+                        <span>{opt}</span>
+                        {isCorrect && <span className="check">✔️</span>}
+                        {isSelected && !isCorrect && <span className="cross">❌</span>}
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+            );
+          })}
+          <div className="buttons">
+            <button onClick={() => setReviewMode(false)}>Volver a resultados</button>
+            <button onClick={finalizar}>Volver al inicio</button>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="exam-result-wrapper">
@@ -90,7 +127,10 @@ export default function ExamResult() {
             <p>No hay imágenes disponibles</p>
           )}
         </div>
-        <button onClick={() => finalizar()}>Volver al inicio</button>
+        <div className="buttons">
+          <button onClick={() => setReviewMode(true)}>Revisar intento</button>
+          <button onClick={finalizar}>Volver al inicio</button>
+        </div>
       </div>
     </div>
   );
