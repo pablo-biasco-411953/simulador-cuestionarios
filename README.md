@@ -18,7 +18,7 @@ Este proyecto permite a los usuarios realizar simulaciones de exámenes con preg
 Clona el repositorio y navega al directorio del proyecto:
 
 ```bash
-git clone (https://github.com/pablo-biasco-411953/simulador-cuestionarios/)
+git clone https://github.com/pablo-biasco-411953/simulador-cuestionarios
 cd simulador-tup
 npm install
 npm run dev
