@@ -128,7 +128,7 @@ export default function Home() {
       {resumeModal && (
         <div className="modal-container-exam">
           <div className="modal-content-exam">
-            <h2>Ya tienes un intento en curso</h2>
+            <h2>Ya tenes un intento en curso</h2>
             <p>¿Querés continuar con tu intento o descartarlo?</p>
             <div className="exam-buttons">
               <button onClick={handleDiscardAttempt}>No, descartar</button>

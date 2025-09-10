@@ -66,6 +66,15 @@ export default function ExamResult() {
     return `${min}:${sec}`;
   };
 
+  
+  const finalizar = () => {
+    localStorage.removeItem("answers");
+    localStorage.removeItem("questions");
+    localStorage.removeItem("timeLeftAtEnd");
+    localStorage.removeItem("exam-started");
+    navigate("/")
+  };
+
   return (
     <div className="exam-result-wrapper">
       <div className="exam-result-card">
@@ -81,7 +90,7 @@ export default function ExamResult() {
             <p>No hay imágenes disponibles</p>
           )}
         </div>
-        <button onClick={() => navigate("/")}>Volver al inicio</button>
+        <button onClick={() => finalizar()}>Volver al inicio</button>
       </div>
     </div>
   );
