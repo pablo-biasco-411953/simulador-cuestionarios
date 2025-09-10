@@ -15,6 +15,11 @@ Este proyecto permite a los usuarios realizar simulaciones de exámenes con preg
 
 ## Instalación
 
+Antes de comenzar, asegúrate de tener instalado:
+
+- [Node.js](https://nodejs.org/) (v16 o superior recomendado)
+- [npm](https://www.npmjs.com/) (se instala automáticamente con Node.js)
+
 Clona el repositorio y navega al directorio del proyecto:
 
 ```bash
