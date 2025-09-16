@@ -10,7 +10,7 @@ export default function Home() {
   const [expandNavbar, setExpandNavbar] = useState(false);
   const [showExamOptions, setShowExamOptions] = useState(false); 
   const [showLoading, setShowLoading] = useState(false);
-  const [loadingText, setLoadingText] = useState("");
+  const [loadingText, setLoadinragText] = useState("");
 
   const [resumeModal, setResumeModal] = useState(false);
 
@@ -81,7 +81,7 @@ export default function Home() {
       localStorage.setItem("exam-started", "true");
 
       navigate("/exam/linear", { state: { questions: selectedQuestions } });
-    }, 7000);
+    }, 1200);
   };
 
    const handleSecuencial = async () => {
@@ -104,7 +104,7 @@ export default function Home() {
       localStorage.setItem("exam-started", "true");
 
       navigate("/exam/sequential", { state: { questions: selectedQuestions } });
-    }, 7000);
+    }, 1200);
   };
 
 
