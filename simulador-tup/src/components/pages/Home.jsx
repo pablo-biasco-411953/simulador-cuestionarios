@@ -10,7 +10,7 @@ export default function Home() {
   const [expandNavbar, setExpandNavbar] = useState(false);
   const [showExamOptions, setShowExamOptions] = useState(false); 
   const [showLoading, setShowLoading] = useState(false);
-  const [loadingText, setLoadinragText] = useState("");
+  const [loadingText, setLoadingText] = useState("");
 
   const [resumeModal, setResumeModal] = useState(false);
 
