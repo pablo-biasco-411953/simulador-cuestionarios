@@ -373,7 +373,6 @@
     ],
     "correcta": "Identificador de Recurso Uniforme"
   },
-  [
   {
     "id": 39,
     "pregunta": "¿Cuál es el propósito de una migración en EF Core?",
@@ -484,6 +483,6 @@
     ],
     "correcta": "ApplicationDbContext"
   }
-]
+
 
 ]
