@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import "./ExamLinear.css";
 
@@ -11,54 +11,47 @@ export default function ExamLinear() {
 
   const savedAnswers = JSON.parse(localStorage.getItem("exam-answers") || "{}");
   const savedTime = parseInt(localStorage.getItem("exam-time")) || 10 * 60;
+  const savedFlags = JSON.parse(localStorage.getItem("exam-flags") || "{}");
 
   const [answers, setAnswers] = useState(savedAnswers);
+  const [flags, setFlags] = useState(savedFlags);
   const [timeLeft, setTimeLeft] = useState(savedTime);
 
-  const [countdownStart, setCountdownStart] = useState(
-    localStorage.getItem("exam-started") ? 0 : 3
-  );
   const [examStarted, setExamStarted] = useState(
     !!localStorage.getItem("exam-started")
   );
-
   const [showFinishModal, setShowFinishModal] = useState(false);
 
+  const questionRefs = useRef([]);
 
   useEffect(() => {
-  if (!examStarted) return;
+    if (!examStarted) return;
 
-  const timer = setInterval(() => {
-    setTimeLeft((prev) => {
-      if (prev <= 1) {
-        clearInterval(timer);
+    const timer = setInterval(() => {
+      setTimeLeft((prev) => {
+        if (prev <= 1) {
+          clearInterval(timer);
 
-        const timeUsed = 10 * 60 - prev;
+          navigate("/exam/results", {
+            state: { username, answers, questions, timeLeftAtEnd: 0 },
+          });
 
-        navigate("/exam/results", {
-          state: {
-            username,
-            answers,
-            questions,
-            timeLeftAtEnd: 0, 
-          },
-        });
+          localStorage.removeItem("exam-time");
+          localStorage.removeItem("exam-answers");
+          localStorage.removeItem("exam-flags");
+          localStorage.removeItem("exam-started");
 
-        localStorage.removeItem("exam-time");
-        localStorage.removeItem("exam-answers");
-        localStorage.removeItem("exam-started");
+          return 0;
+        }
 
-        return 0;
-      }
+        const newTime = prev - 1;
+        localStorage.setItem("exam-time", newTime);
+        return newTime;
+      });
+    }, 1000);
 
-      const newTime = prev - 1;
-      localStorage.setItem("exam-time", newTime);
-      return newTime;
-    });
-  }, 1000);
-
-  return () => clearInterval(timer);
-}, [examStarted, navigate, answers, questions, username]);
+    return () => clearInterval(timer);
+  }, [examStarted, navigate, answers, questions, username]);
 
   const handleCheckboxChange = (questionIndex, option) => {
     setAnswers((prev) => {
@@ -80,28 +73,29 @@ export default function ExamLinear() {
     });
   };
 
-  const handleFinishClick = () => {
-    
-    setShowFinishModal(true); 
+  const handleToggleFlag = (index) => {
+    setFlags((prev) => {
+      const updated = { ...prev, [index]: !prev[index] };
+      localStorage.setItem("exam-flags", JSON.stringify(updated));
+      return updated;
+    });
+  };
+
+  const scrollToQuestion = (index) => {
+    questionRefs.current[index]?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
   };
 
   const handleConfirmFinish = () => {
     localStorage.removeItem("exam-time");
     localStorage.removeItem("exam-answers");
+    localStorage.removeItem("exam-flags");
     localStorage.removeItem("exam-started");
-   navigate("/exam/results", {
-    state: {
-        username,
-        answers,
-        questions,
-        timeLeftAtEnd: timeLeft,
-    },
+    navigate("/exam/results", {
+      state: { username, answers, questions, timeLeftAtEnd: timeLeft },
     });
-
-  };
-
-  const handleCancelFinish = () => {
-    setShowFinishModal(false);
   };
 
   const formatTime = (seconds) => {
@@ -121,15 +115,43 @@ export default function ExamLinear() {
             </span>
           )}
         </div>
+        <div className="navbar-questions">
+          {questions.map((_, idx) => (
+            <div
+              key={idx}
+              className={`nav-question ${
+                answers[idx]?.length ? "answered" : ""
+              } ${flags[idx] ? "flagged" : ""}`}
+              onClick={() => scrollToQuestion(idx)}
+            >
+              {idx + 1}
+              {flags[idx] && <span className="flag-icon">⚑</span>}
+            </div>
+          ))}
+        </div>
       </div>
 
       <div
-        className={`exam-linear-container ${!examStarted ? "blurred" : ""} ${showFinishModal ? "blurred" : ""}`}
+        className={`exam-linear-container ${
+          !examStarted ? "blurred" : ""
+        } ${showFinishModal ? "blurred" : ""}`}
       >
         <h1>Parcial</h1>
         {questions.map((q, idx) => (
-          <div key={idx} className="question-container">
-            <h3>{`Pregunta ${idx + 1}: ${q.pregunta}`}</h3>
+          <div
+            key={idx}
+            ref={(el) => (questionRefs.current[idx] = el)}
+            className="question-container"
+          >
+            <div className="question-header">
+              <h3>{`Pregunta ${idx + 1}: ${q.pregunta}`}</h3>
+              <button
+                className={`flag-btn ${flags[idx] ? "active" : ""}`}
+                onClick={() => handleToggleFlag(idx)}
+              >
+                {flags[idx] ? "Quitar bandera" : "Marcar"}
+              </button>
+            </div>
             <div className="options-container">
               {q.opciones.map((option, oidx) => (
                 <label key={oidx} className="option-label">
@@ -147,7 +169,10 @@ export default function ExamLinear() {
           </div>
         ))}
         {examStarted && !showFinishModal && (
-          <button className="finish-button" onClick={handleFinishClick}>
+          <button
+            className="finish-button"
+            onClick={() => setShowFinishModal(true)}
+          >
             Finalizar Intento
           </button>
         )}
@@ -159,7 +184,7 @@ export default function ExamLinear() {
             <h2>¿Enviar todo y finalizar?</h2>
             <div className="exam-buttons">
               <button onClick={handleConfirmFinish}>Finalizar intento</button>
-              <button onClick={handleCancelFinish}>Volver</button>
+              <button onClick={() => setShowFinishModal(false)}>Volver</button>
             </div>
           </div>
         </div>

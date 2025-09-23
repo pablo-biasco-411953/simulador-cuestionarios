@@ -63,7 +63,8 @@ export default function Home() {
 
   const handleLineal = async () => {
     setShowExamOptions(false);       
-    setShowLoading(true);            
+    setShowLoading(true);      
+    localStorage.setItem("exam-type", "linear");      
     setLoadingText("Cargando preguntas...");
 
     setTimeout(() => {
@@ -81,14 +82,14 @@ export default function Home() {
       localStorage.setItem("exam-started", "true");
 
       navigate("/exam/linear", { state: { questions: selectedQuestions } });
-    }, 7000);
+    }, 1500);
   };
 
    const handleSecuencial = async () => {
     setShowExamOptions(false);       
     setShowLoading(true);            
     setLoadingText("Cargando preguntas...");
-
+    localStorage.setItem("exam-type", "sequential");
     setTimeout(() => {
       setLoadingText("Randomizando preguntas...");
     }, 1000);
@@ -111,7 +112,12 @@ export default function Home() {
   const handleContinueAttempt = () => {
     const savedQuestions = JSON.parse(localStorage.getItem("exam-questions") || "[]");
     setResumeModal(false);
-    navigate("/exam/linear", { state: { questions: savedQuestions } });
+    const examType = localStorage.getItem("exam-type") || "linear"; 
+    if (examType === "sequential") {
+        navigate("/exam/sequential", { state: { questions: savedQuestions } });
+      } else {
+        navigate("/exam/linear", { state: { questions: savedQuestions } });
+      }
   };
 
   const handleDiscardAttempt = () => {
@@ -124,7 +130,6 @@ export default function Home() {
 
   return (
     <>
-      {/* Modal para continuar examen */}
       {resumeModal && (
         <div className="modal-container-exam">
           <div className="modal-content-exam">
@@ -138,7 +143,6 @@ export default function Home() {
         </div>
       )}
 
-      {/* Modal que se transforma en navbar */}
       {!showLoading && !resumeModal && (
         <div className={`modal-to-navbar ${animateModal ? "animate" : ""} ${expandNavbar ? "expanded" : ""}`}>
           {!animateModal && (
