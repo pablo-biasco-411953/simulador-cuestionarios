@@ -372,5 +372,117 @@
       "Protocolo de Transferencia de Hipertexto"
     ],
     "correcta": "Identificador de Recurso Uniforme"
+  },
+  {
+    "id": 39,
+    "pregunta": "¿Cuál es el propósito de una migración en EF Core?",
+    "opciones": [
+      "Eliminar entidades innecesarias del proyecto.",
+      "Cambiar el proveedor de base de datos.",
+      "Sincronizar el modelo de datos con la estructura de la base de datos.",
+      "Migrar datos entre dos bases de datos."
+    ],
+    "correcta": "Sincronizar el modelo de datos con la estructura de la base de datos."
+  },
+  {
+    "id": 40,
+    "pregunta": "¿Qué es una Task en C#?",
+    "opciones": [
+      "Es un método para eliminar hilos en C#.",
+      "Es una clase que representa una unidad de trabajo asíncrona que se ejecuta en segundo plano.",
+      "Es una propiedad que convierte una operación en síncrona.",
+      "Es una clase que representa una unidad de trabajo síncrona que se ejecuta en el hilo principal."
+    ],
+    "correcta": "Es una clase que representa una unidad de trabajo asíncrona que se ejecuta en segundo plano."
+  },
+  {
+    "id": 41,
+    "pregunta": "¿Qué palabra clave se usa para hacer un método asíncrono en C#?",
+    "opciones": [
+      "async",
+      "await",
+      "sync",
+      "task"
+    ],
+    "correcta": "async"
+  },
+  {
+    "id": 42,
+    "pregunta": "¿Qué significa Eager Loading en EF Core?",
+    "opciones": [
+      "Cargar datos de manera diferida.",
+      "Cargar los datos sólo cuando se soliciten.",
+      "Cargar todos los datos de la entidad y sus relaciones de inmediato.",
+      "Cargar sólo los datos principales y no las relaciones."
+    ],
+    "correcta": "Cargar todos los datos de la entidad y sus relaciones de inmediato."
+  },
+  {
+    "id": 43,
+    "pregunta": "¿Cuál es el resultado de ejecutar la instrucción await _context.Productos.ToListAsync()?",
+    "opciones": [
+      "Inserta una lista de productos de forma asíncrona.",
+      "Retorna una lista de productos de forma asíncrona.",
+      "Retorna una lista de productos de forma síncrona.",
+      "Elimina una lista de productos de forma síncrona."
+    ],
+    "correcta": "Retorna una lista de productos de forma asíncrona."
+  },
+  {
+    "id": 44,
+    "pregunta": "¿Qué es Eager Loading en EF Core?",
+    "opciones": [
+      "Es el proceso de cargar datos relacionados junto con la entidad principal en una sola consulta.",
+      "Es un método para diferir la carga de datos relacionados hasta que se necesiten.",
+      "Es una técnica que evita cargar cualquier dato relacionado.",
+      "Es una técnica que carga datos sólo cuando ocurre una excepción."
+    ],
+    "correcta": "Es el proceso de cargar datos relacionados junto con la entidad principal en una sola consulta."
+  },
+  {
+    "id": 45,
+    "pregunta": "¿Qué propiedad del archivo appsettings.json se utiliza para configurar la conexión a la base de datos en un proyecto EF Core?",
+    "opciones": [
+      "SQLConnectionStrings",
+      "ConnectionStrings",
+      "DbConnection",
+      "EFCoreConnection"
+    ],
+    "correcta": "ConnectionStrings"
+  },
+  {
+    "id": 46,
+    "pregunta": "¿Qué tipo de carga de datos es menos propensa a causar problemas de rendimiento relacionados con el problema de N + 1?",
+    "opciones": [
+      "Ambos tipos de carga de datos conllevan a problemas de rendimiento relacionados con el problema de N + 1.",
+      "Lazy Loading",
+      "Ningún tipo de carga de datos conllevan a problemas de rendimiento relacionados con el problema de N + 1.",
+      "Eager Loading"
+    ],
+    "correcta": "Eager Loading"
+  },
+  {
+    "id": 47,
+    "pregunta": "¿Qué método se utiliza para insertar un nuevo registro en una base de datos con EF Core?",
+    "opciones": [
+      "Append()",
+      "Insert()",
+      "Add()",
+      "New()"
+    ],
+    "correcta": "Add()"
+  },
+  {
+    "id": 48,
+    "pregunta": "¿Qué clase de EF Core representa una sesión con la base de datos y configura las relaciones entre entidades?",
+    "opciones": [
+      "ContextSession",
+      "ApplicationDbContext",
+      "DbContextOptions",
+      "EntityContext"
+    ],
+    "correcta": "ApplicationDbContext"
   }
+
+
 ]

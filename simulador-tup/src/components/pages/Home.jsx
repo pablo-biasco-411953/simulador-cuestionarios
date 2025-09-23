@@ -105,7 +105,7 @@ export default function Home() {
       localStorage.setItem("exam-started", "true");
 
       navigate("/exam/sequential", { state: { questions: selectedQuestions } });
-    }, 7000);
+    }, 1200);
   };
 
 
