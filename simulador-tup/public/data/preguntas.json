@@ -473,16 +473,235 @@
     "correcta": "Add()"
   },
   {
-    "id": 48,
+    "id": 49,
+    "pregunta": "¿Qué hace el método ToTable(T_Productos) en la configuración del modelo?",
+    "opciones": [
+      "Cambia el nombre de la tabla de Productos a T_Productos",
+      "Elimina la tabla Productos",
+      "Crea una nueva tabla llamada T_Productos",
+      "Recupera los registros de la tabla T_Productos"
+    ],
+    "correcta": "ApplicationDbContext"
+  },
+  {
+    "id": 50,
+    "pregunta": "¿Qué lenguaje se utiliza para consultas en Entity Framework Core?",
+    "opciones": [
+      "C#",
+      "LINQ",
+      "Java",
+      "SQL"
+    ],
+    "correcta": "ApplicationDbContext"
+  },
+  {
+    "id": 51,
+    "pregunta": "¿¿Qué efecto tendría el comando dotnet ef migrations add <nombre_migracion>?",
+    "opciones": [
+      "Crea una nueva migración con los cambios en el modelo",
+      "ApplicaAplica las migraciones pendientes a la base de datos",
+      "Revierte la última migración",
+      "DbContextOptions",
+      "Elimina la migración especificada"
+    ],
+    "correcta": "Crea una nueva migración con los cambios en el modelo"
+  },
+  {
+    "id": 52,
+    "pregunta": "¿Qué es un ORM?",
+    "opciones": [
+      "Un lenguaje de consulta para bases de datos SQL",
+      "Un compilador de código que permite transformar código C# en código SQL",
+      "Una herramienta que convierte objetos de una aplicación a un formato adecuado para ser almacenados en una base de datos",
+      "Un sistema de gestión de bases de datos que posee más funcionalidades que SQL Server Management Studio"
+    ],
+    "correcta": "Una herramienta que convierte objetos de una aplicación a un formato adecuado para ser almacenados en una base de datos"
+  },
+  {
+    "id": 53,
+    "pregunta": "¿Qué es EF Core?",
+    "opciones": [
+      "Un sistema operativo",
+      "Un lenguaje de programación",
+      "Un ORM para bases de datos NoSQL",
+      "Un mapeador de bases de datos. (Generalmente se le conoce como ORM - Object-Relational Mapper, que esencialmente es un 'mapeador de bases de datos')"
+    ],
+    "correcta": "Una herramienta que convierte objetos de una aplicación a un formato adecuado para ser almacenados en una base de datos"
+  },
+  {
+    "id": 54,
+    "pregunta": "¿Qué método de LINQ se utiliza para filtrar registros a través de múltiples condiciones?",
+    "opciones": [
+      "FirstOrDefault()",
+      "Filter()",
+      "Where()",
+      "ToList()"
+    ],
+    "correcta": "Where()"
+  },
+  {
+    "id": 55,
+    "pregunta": "¿¿Qué palabra clave en C# se utiliza para esperar el resultado de una operación asíncrona?",
+    "opciones": [
+      "join",
+      "wait",
+      "async",
+      "await "
+    ],
+    "correcta": "await"
+  },
+  {
+    "id": 56,
+    "pregunta": "¿Qué propiedad del archivo appsettings.json se utiliza para configurar la conexión a la base de datos en un proyecto EF Core?",
+    "opciones": [
+      "EFCoreConnection",
+      "ConnectionStrings",
+      "DbConnection",
+      "SQLConnectionStrings"
+    ],
+    "correcta": "ConnectionStrings"
+  },
+  {
+    "id": 57,
+    "pregunta": "¿Qué es Eager Loading en EF Core?",
+    "opciones": [
+      "Es una técnica que carga datos solo cuando ocurre una excepción",
+      "Es una técnica que evita cargar cualquier dato relacionado",
+      "Es un método para diferir la carga de datos relacionados hasta que se necesiten",
+      "Es el proceso de cargar datos relacionados junto con la entidad principal en una sola consulta"
+    ],
+    "correcta": "Es el proceso de cargar datos relacionados junto con la entidad principal en una sola consulta"
+  },
+  {
+    "id": 58,
+    "pregunta": "¿Qué hace el patrón Repository en EF Core?",
+    "opciones": [
+      "Facilita la separación de responsabilidades",
+      "Mejora el rendimiento de consultas SQL",
+      "Permite conexiones persistentes a la base de datos",
+      "Almacena los datos en caché"
+    ],
+    "correcta": "Facilita la separación de responsabilidades"
+  },
+   {
+    "id": 59,
+    "pregunta": "¿Qué permite la implementación de interfaces en una clase?",
+    "opciones": [
+      "Crear instancias de una clase abstracta",
+      "Ocultar métodos de una clase base",
+      "Heredar automáticamente de otra clase",
+      "Definir un contrato que la clase debe cumplir"
+    ],
+    "correcta": "Definir un contrato que la clase debe cumplir"
+  },
+  {
+    "id": 60,
+    "pregunta": "¿Cuál es la palabra clave utilizada para definir una enumeración en C#?",
+    "opciones": [
+      "class",
+      "enum",
+      "number",
+      "enumeration"
+    ],
+    "correcta": "enum"
+  },
+  {
+    "id": 61,
+    "pregunta": "¿Qué es una interfaz en POO?",
+    "opciones": [
+      "Una clase que no puede ser instanciada",
+      "Un método que no puede ser sobrescrito",
+      "Una clase que solo tiene métodos privados",
+      "Un contrato que define un conjunto de métodos que una clase debe implementar"
+    ],
+    "correcta": "Un contrato que define un conjunto de métodos que una clase debe implementar"
+  },
+  {
+    "id": 62,
+    "pregunta": "¿Cuál es el objetivo principal del modelo de programación en capas?",
+    "opciones": [
+      "Separar responsabilidades entre las clases",
+      "Mejorar el rendimiento del sistema",
+      "Reducir el uso de memoria",
+      "Facilitar la compilación del código"
+    ],
+    "correcta": "Separar responsabilidades entre las clases"
+  },
+  {
+    "id": 63,
+    "pregunta": "¿Cuál de los siguientes NO es un beneficio del patrón Singleton?",
+    "opciones": [
+      "Simplificación de la estructura de clases",
+      "Proporciona una única instancia global",
+      "Reducción del consumo de memoria",
+      "Control sobre la instanciación de clases"
+    ],
+    "correcta": "Reducción del consumo de memoria"
+  },
+  {
+    "id": 64,
+    "pregunta": "¿Para qué se utiliza el método HTTP OPTIONS?",
+    "opciones": [
+      "Reemplazar todas las representaciones actuales del recurso de destino con la carga útil de la solicitud",
+      "Solicitar una respuesta idéntica a la de una solicitud GET pero sin el cuerpo de la respuesta",
+      "Solicitar una representación del recurso especificado",
+      "Describir las opciones de comunicación para el recurso de destino"
+    ],
+    "correcta": "Describir las opciones de comunicación para el recurso de destino"
+  },
+  {
+    "id": 65,
+    "pregunta": "¿Cuál es la función principal del método HTTP CONNECT?",
+    "opciones": [
+      "Enviar una entidad al recurso especificado",
+      "Aplicar modificaciones parciales a un recurso",
+      "Convertir la solicitud en un túnel TCP/IP",
+      "Solicitar una representación del recurso especificado"
+    ],
+    "correcta": "Convertir la solicitud en un túnel TCP/IP"
+  },
+  {
+    "id": 66,
+    "pregunta": "¿Qué significa HTTP?",
+    "opciones": [
+      "Hyperlink Text Protocol",
+      "Hypertext Transfer Protocol",
+      "Hyperlink Transfer Protocol",
+      "High Text Transfer Protocol"
+    ],
+    "correcta": "Hypertext Transfer Protocol"
+  },
+  {
+    "id": 67,
+    "pregunta": "¿Qué hace el atributo DbSet<Producto> en el contexto de una base de datos?",
+    "opciones": [
+      "Representa las entidades de la tabla Productos",
+      "Representa una vista de la tabla Productos",
+      "Realiza una operación de inserción sobre la tabla Productos",
+      "Genera un procedimiento almacenado sobre la tabla Productos"
+    ],
+    "correcta": "Representa las entidades de la tabla Productos"
+  },
+  {
+    "id": 68,
+    "pregunta": "¿Qué lenguaje se utiliza para consultas en Entity Framework Core?",
+    "opciones": [
+      "Java",
+      "LINQ",
+      "SQL",
+      "C#"
+    ],
+    "correcta": "LINQ"
+  },
+   {
+    "id": 69,
     "pregunta": "¿Qué clase de EF Core representa una sesión con la base de datos y configura las relaciones entre entidades?",
     "opciones": [
-      "ContextSession",
-      "ApplicationDbContext",
-      "DbContextOptions",
-      "EntityContext"
+    "ContextSession",
+    "ApplicationDbContext",
+    "DbContextOptions",
+    "EntityContext"
     ],
     "correcta": "ApplicationDbContext"
   }
-
-
 ]
