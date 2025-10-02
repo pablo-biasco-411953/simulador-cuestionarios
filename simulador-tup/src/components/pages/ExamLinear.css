@@ -11,21 +11,32 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  min-height: 20px;
-  background-color: #2b2c2c; 
-  color: #fff;
+  right: 0;
+  background-color: #333333;
+  color: white;
   display: flex;
-  justify-content: space-between; 
+  justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
-  z-index: 1000;
-  font-weight: bold;
+  padding: 12px 20px;
   font-size: 16px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-  flex-wrap: wrap; 
+  font-weight: bold;
+  z-index: 1000;
+  flex-wrap: wrap;
+  box-sizing: border-box; 
+  overflow-x: auto; 
 }
 
+.nav-question-container { /* si tienes un contenedor para los botones de navegación */
+  display: flex;
+  flex-wrap: wrap; /* evita que los botones se salgan del navbar */
+  gap: 8px;
+  max-width: 100%; /* no sobrepasa el ancho del navbar */
+}
+
+.nav-question {
+  white-space: nowrap; /* evita que el texto haga wrap extraño */
+  flex: 0 0 auto; /* evita que se estire demasiado */
+}
 .navbar-left {
   display: flex;
   gap: 20px;

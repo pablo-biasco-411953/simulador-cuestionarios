@@ -18,6 +18,8 @@
   font-weight: bold;
   z-index: 1000;
   flex-wrap: wrap;
+  box-sizing: border-box; 
+  overflow-x: auto; 
 }
 
 .time-warning {
@@ -81,7 +83,17 @@
   cursor: pointer;
   transition: background 0.2s ease;
 }
+.nav-question-container { /* si tienes un contenedor para los botones de navegación */
+  display: flex;
+  flex-wrap: wrap; /* evita que los botones se salgan del navbar */
+  gap: 8px;
+  max-width: 100%; /* no sobrepasa el ancho del navbar */
+}
 
+.nav-question {
+  white-space: nowrap; /* evita que el texto haga wrap extraño */
+  flex: 0 0 auto; /* evita que se estire demasiado */
+}
 .question-actions button:hover {
   background-color: #095252;
 }
