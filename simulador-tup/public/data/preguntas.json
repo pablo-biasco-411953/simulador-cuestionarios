@@ -481,7 +481,7 @@
       "Crea una nueva tabla llamada T_Productos",
       "Recupera los registros de la tabla T_Productos"
     ],
-    "correcta": "ApplicationDbContext"
+    "correcta": "Cambia el nombre de la tabla de Productos a T_Productos"
   },
   {
     "id": 50,
@@ -492,7 +492,7 @@
       "Java",
       "SQL"
     ],
-    "correcta": "ApplicationDbContext"
+    "correcta": "LINQ"
   },
   {
     "id": 51,
@@ -526,7 +526,7 @@
       "Un ORM para bases de datos NoSQL",
       "Un mapeador de bases de datos. (Generalmente se le conoce como ORM - Object-Relational Mapper, que esencialmente es un 'mapeador de bases de datos')"
     ],
-    "correcta": "Una herramienta que convierte objetos de una aplicación a un formato adecuado para ser almacenados en una base de datos"
+    "correcta": "Un mapeador de bases de datos. (Generalmente se le conoce como ORM - Object-Relational Mapper, que esencialmente es un 'mapeador de bases de datos')"
   },
   {
     "id": 54,
