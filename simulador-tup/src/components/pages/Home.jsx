@@ -68,7 +68,7 @@ export default function Home() {
     setLoadingText("Cargando preguntas...");
 
     setTimeout(() => {
-      setLoadingText("Randomizando preguntas...");
+      setLoadingText("Randomizando...");
     }, 1000);
 
     setTimeout(async () => {
