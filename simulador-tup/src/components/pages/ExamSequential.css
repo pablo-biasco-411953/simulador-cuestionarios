@@ -1,11 +1,7 @@
-/* src/components/ExamSequential.css */
-
 .exam-sequential-wrapper {
   font-family: Arial, sans-serif;
-  padding-top: 70px; 
-
+  padding-top: 70px;
 }
-
 
 .exam-navbar {
   position: fixed;
@@ -16,10 +12,12 @@
   color: white;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 12px 20px;
   font-size: 16px;
   font-weight: bold;
   z-index: 1000;
+  flex-wrap: wrap;
 }
 
 .time-warning {
@@ -68,7 +66,9 @@
 .question-actions {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   margin-top: 20px;
+  gap: 10px;
 }
 
 .question-actions button {
@@ -84,4 +84,45 @@
 
 .question-actions button:hover {
   background-color: #095252;
+}
+
+@media (max-width: 768px) {
+  .exam-navbar {
+    flex-direction: column;
+    gap: 6px;
+    font-size: 14px;
+  }
+
+  .question-card {
+    margin: 20px 10px;
+    padding: 20px;
+  }
+
+  .question-card h3 {
+    font-size: 18px;
+  }
+
+  .option-label {
+    font-size: 0.95rem;
+    padding: 6px;
+  }
+
+  .question-actions button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .exam-navbar {
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  .option-label {
+    font-size: 0.9rem;
+  }
+
+  .question-card h3 {
+    font-size: 16px;
+  }
 }

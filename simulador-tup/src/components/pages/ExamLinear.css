@@ -16,7 +16,7 @@
   background-color: #2b2c2c; 
   color: #fff;
   display: flex;
-  justify-content: center; 
+  justify-content: space-between; 
   align-items: center;
   padding: 10px 20px;
   z-index: 1000;
@@ -139,6 +139,16 @@
   .exam-linear-container h1 {
     font-size: 1.5rem;
   }
+
+  .navbar-questions {
+    margin-right: 0;
+    max-width: 80vw;
+  }
+
+  .navbar-timer {
+    font-size: 14px;
+    margin-top: 5px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -195,14 +205,15 @@
   gap: 15px;
   margin-top: 20px;
 }
+
 .navbar-questions {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(28px, auto)); /* evita que se estiren */
+  grid-template-columns: repeat(auto-fit, minmax(28px, auto));
   gap: 6px;
   justify-content: center;
   max-width: 90vw;
-  margin-right: 100px;
 }
+
 .nav-question {
   width: 28px;
   height: 28px;
